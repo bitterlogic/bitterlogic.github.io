@@ -31,6 +31,16 @@ We&amp;rsquo;ll start with creating a new site with a very basic template. Then 
     </item>
     
     <item>
+      <title>LibGDX</title>
+      <link>https://bitterlogic.github.io/post/libgdx/</link>
+      <pubDate>Fri, 03 Aug 2018 01:37:56 +0800</pubDate>
+      
+      <guid>https://bitterlogic.github.io/post/libgdx/</guid>
+      <description> LibGDX LibGDX is an open source cross-platform game development framework in Java. Write your game once and run it on Windows, Linux, Mac OS X, Android, iOS, and HTML5.
+Link to some of my favourite games  Paperama by FDG Entertainment GmbH &amp;amp; Co.KG Halfway by Robotality Zombie Age 3 by DivMob Apparatus by Bithack Epic Heroes War by DivMob Tap Tap Dash By Cheetah Games DISTRAINT: Pocket Pixel Horror by Jesse Makkonen  </description>
+    </item>
+    
+    <item>
       <title>This is a hidden post.</title>
       <link>https://bitterlogic.github.io/post/hidden-post/</link>
       <pubDate>Thu, 08 Mar 2018 17:40:19 +0800</pubDate>
