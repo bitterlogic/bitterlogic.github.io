@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://bitterlogic.github.io/post/googlesignin-preview/</loc>
+    <lastmod>2018-08-03T15:43:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bitterlogic.github.io/post/hidden-post/</loc>
     <lastmod>2018-03-08T22:01:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -25,13 +32,6 @@
   
   <url>
     <loc>https://bitterlogic.github.io/post/english-preview/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bitterlogic.github.io/post/googlesignin-preview/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -81,7 +81,7 @@
   
   <url>
     <loc>https://bitterlogic.github.io/tags/android/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <lastmod>2018-08-03T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -115,7 +115,7 @@
   
   <url>
     <loc>https://bitterlogic.github.io/categories/english/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <lastmod>2018-08-03T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -129,14 +129,14 @@
   
   <url>
     <loc>https://bitterlogic.github.io/tags/ios/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <lastmod>2018-08-03T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bitterlogic.github.io/tags/libgdx/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <lastmod>2018-08-03T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -220,7 +220,7 @@
   
   <url>
     <loc>https://bitterlogic.github.io/tags/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <lastmod>2018-08-03T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

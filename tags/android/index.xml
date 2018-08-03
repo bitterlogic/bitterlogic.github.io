@@ -6,15 +6,15 @@
     <description>Recent content in Android on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 31 Aug 2017 15:43:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Aug 2018 15:43:48 +0800</lastBuildDate>
     
 	<atom:link href="https://bitterlogic.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[English] Google Sign in LibGDX</title>
+      <title>Google Sign in LibGDX</title>
       <link>https://bitterlogic.github.io/post/googlesignin-preview/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      <pubDate>Fri, 03 Aug 2018 15:43:48 +0800</pubDate>
       
       <guid>https://bitterlogic.github.io/post/googlesignin-preview/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
