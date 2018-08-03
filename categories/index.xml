@@ -31,9 +31,27 @@
     <item>
       <title>English</title>
       <link>https://bitterlogic.github.io/categories/english/</link>
-      <pubDate>Fri, 03 Aug 2018 15:43:48 +0800</pubDate>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
       <guid>https://bitterlogic.github.io/categories/english/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Games</title>
+      <link>https://bitterlogic.github.io/categories/games/</link>
+      <pubDate>Fri, 03 Aug 2018 15:43:48 +0800</pubDate>
+      
+      <guid>https://bitterlogic.github.io/categories/games/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LibGDX</title>
+      <link>https://bitterlogic.github.io/categories/libgdx/</link>
+      <pubDate>Fri, 03 Aug 2018 15:43:48 +0800</pubDate>
+      
+      <guid>https://bitterlogic.github.io/categories/libgdx/</guid>
       <description></description>
     </item>
     
