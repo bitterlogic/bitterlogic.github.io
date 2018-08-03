@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/tags/english/</loc>
+    <loc>https://bitterlogic.github.io/categories/english/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/categories/english/</loc>
+    <loc>https://bitterlogic.github.io/tags/english/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -128,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/tags/shortcodes/</loc>
-    <lastmod>2018-02-01T18:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://bitterlogic.github.io/categories/shortcodes/</loc>
     <lastmod>2018-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -142,14 +135,21 @@
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/tags/syntax-highlighting/</loc>
-    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
+    <loc>https://bitterlogic.github.io/tags/shortcodes/</loc>
+    <lastmod>2018-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bitterlogic.github.io/categories/syntax-highlighting/</loc>
+    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bitterlogic.github.io/tags/syntax-highlighting/</loc>
     <lastmod>2017-08-30T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -198,13 +198,6 @@
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/tags/theme-preview/</loc>
-    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://bitterlogic.github.io/categories/theme-preview/</loc>
     <lastmod>2017-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,8 +205,8 @@
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
-    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <loc>https://bitterlogic.github.io/tags/theme-preview/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -226,14 +219,21 @@
   </url>
   
   <url>
-    <loc>https://bitterlogic.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
-    <lastmod>2017-08-30T01:53:34+08:00</lastmod>
+    <loc>https://bitterlogic.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bitterlogic.github.io/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    <lastmod>2017-08-30T01:53:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bitterlogic.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
     <lastmod>2017-08-30T01:53:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
