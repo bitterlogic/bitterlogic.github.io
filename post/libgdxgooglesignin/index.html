@@ -18,7 +18,7 @@
 
 <meta name="author" content="Abhishek Aryan" />
   <meta name="description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&amp;rsquo;ll explain how integrate Google Sign in iOS.
-This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
+This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
  Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
 
@@ -54,7 +54,7 @@ Pre-requisites It is assumed that you have:
 
 <meta property="og:title" content="Google Sign in LibGDX" />
 <meta property="og:description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
-This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
+This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
  Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
 <meta property="og:type" content="article" />
@@ -78,7 +78,7 @@ Pre-requisites It is assumed that you have:
 
 <meta itemprop="name" content="Google Sign in LibGDX">
 <meta itemprop="description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
-This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
+This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
  Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here">
 
@@ -93,7 +93,7 @@ Pre-requisites It is assumed that you have:
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Google Sign in LibGDX"/>
 <meta name="twitter:description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
-This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
+This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
  Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here"/>
 
@@ -208,7 +208,7 @@ Pre-requisites It is assumed that you have:
 
 <p>This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.</p>
 
-<p>This is based on <a href="https://github.com/MobiDevelop/robovm-robopods">MobiDevelop&rsquo;s Google Sign-in Robopods</a>.</p>
+<p>This is based on <a href="https://github.com/MobiDevelop/robovm-robopods">MobiDevelop&rsquo;s Google Sign-in Robopods</a>.</p>
 
 <h2 id="pre-requisites">Pre-requisites</h2>
 
@@ -223,72 +223,66 @@ Pre-requisites It is assumed that you have:
 <h2 id="installation">Installation</h2>
 
 <ol>
-<li><p>Add downloaded framework to your iOS project&rsquo;s <code>libs/</code> folder (create If not present there)</p></li>
+<li><p>Add downloaded framework to your iOS project&rsquo;s <code>libs/</code> folder (create If not present there)</p></li>
 
 <li><p>Put the <code>GoogleSignIn.bundle</code> in your iOS project&rsquo;s <code>resources/</code> folder (create If not present there)</p></li>
 
-<li><p>Add the following to your <code>robovm.xml</code></p></li>
-</ol>
+<li><p>Add the following to your <code>robovm.xml</code></p>
 
-<pre><code>   &lt;config&gt;
+<pre><code>&lt;config&gt;
+...
+&lt;resources&gt;
     ...
-    &lt;resources&gt;
-        ...
-        &lt;resource&gt;
-            &lt;directory&gt;resources&lt;/directory&gt;
-        &lt;/resource&gt;
-    &lt;/resources&gt;
-    ...
-    &lt;frameworkPaths&gt;
-        &lt;path&gt;libs&lt;/path&gt;
-    &lt;/frameworkPaths&gt;
-    &lt;frameworks&gt;
-        &lt;framework&gt;GoogleSignIn&lt;/framework&gt;
-    &lt;/frameworks&gt;
-   &lt;/config&gt; 
-</code></pre>
+    &lt;resource&gt;
+        &lt;directory&gt;resources&lt;/directory&gt;
+    &lt;/resource&gt;
+&lt;/resources&gt;
+...
+&lt;frameworkPaths&gt;
+    &lt;path&gt;libs&lt;/path&gt;
+&lt;/frameworkPaths&gt;
+&lt;frameworks&gt;
+    &lt;framework&gt;GoogleSignIn&lt;/framework&gt;
+&lt;/frameworks&gt;
+&lt;/config&gt; 
+</code></pre></li>
 
-<ol>
-<li>Add the following to your <code>info.plist.xml</code></li>
-</ol>
+<li><p>Add the following to your <code>info.plist.xml</code></p>
 
-<pre><code>   &lt;key&gt;CFBundleURLTypes&lt;/key&gt;
-    &lt;array&gt;
-      &lt;dict&gt;
-      &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
+<pre><code>&lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+&lt;array&gt;
+  &lt;dict&gt;
+  &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
+        &lt;string&gt;Editor&lt;/string&gt;
+        &lt;key&gt;CFBundleURLName&lt;/key&gt;
+        &lt;string&gt;com.googleusercontent.apps.1234567890-qweasdzxcqweasdzxc321456&lt;/string&gt;
+        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+        &lt;array&gt;
+           &lt;string&gt;com.googleusercontent.apps.1234567890-qweasdzxcqweasdzxc321456&lt;/string&gt;
+         &lt;/array&gt;
+     &lt;/dict&gt;
+     &lt;dict&gt;
+            &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
             &lt;string&gt;Editor&lt;/string&gt;
-            &lt;key&gt;CFBundleURLName&lt;/key&gt;
-            &lt;string&gt;com.googleusercontent.apps.1234567890-qweasdzxcqweasdzxc321456&lt;/string&gt;
+            &lt;key&gt;${bundle.id}&lt;/key&gt;
+            &lt;string&gt;${bundle.id}&lt;/string&gt;
             &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
             &lt;array&gt;
-               &lt;string&gt;com.googleusercontent.apps.1234567890-qweasdzxcqweasdzxc321456&lt;/string&gt;
-             &lt;/array&gt;
-         &lt;/dict&gt;
-         &lt;dict&gt;
-                &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
-                &lt;string&gt;Editor&lt;/string&gt;
-                &lt;key&gt;${bundle.id}&lt;/key&gt;
                 &lt;string&gt;${bundle.id}&lt;/string&gt;
-                &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
-                &lt;array&gt;
-                    &lt;string&gt;${bundle.id}&lt;/string&gt;
-                &lt;/array&gt;
-            &lt;/dict&gt;
-   &lt;/array&gt;
-</code></pre>
+            &lt;/array&gt;
+        &lt;/dict&gt;
+&lt;/array&gt;
+</code></pre></li>
 
-<ol>
-<li>Add the following dependency to your <code>build.gradle</code></li>
-</ol>
+<li><p>Add the following dependency to your <code>build.gradle</code></p>
 
-<pre><code>   dependencies {
-    ... other dependencies ...
-      compile &quot;com.mobidevelop.robovm:robopods-google-signin-ios:$robopodsVersion&quot;
-   }
-</code></pre>
+<pre><code>dependencies {
+     ... other dependencies ...
+     compile &quot;com.mobidevelop.robovm:robopods-google-signin-ios:$robopodsVersion&quot;
+}
+</code></pre></li>
 
-<ol>
-<li>Coding part</li>
+<li><p>Coding part</p></li>
 </ol>
 
     </div>

@@ -28,7 +28,7 @@ Link to some of my favourite games  Paperama by FDG Entertainment GmbH &amp;amp;
       
       <guid>https://bitterlogic.github.io/post/libgdxgooglesignin/</guid>
       <description>Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&amp;rsquo;ll explain how integrate Google Sign in iOS.
-This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
+This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
  Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here</description>
     </item>
