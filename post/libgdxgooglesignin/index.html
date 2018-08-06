@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Google Sign in LibGDX - Bitter Logic</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Abhishek Aryan" />
+  <meta name="description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&amp;rsquo;ll explain how integrate Google Sign in iOS.
+This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
+Pre-requisites It is assumed that you have:
+ Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45" />
+
+
+<link rel="canonical" href="https://bitterlogic.github.io/post/libgdxgooglesignin/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Google Sign in LibGDX" />
+<meta property="og:description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
+This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
+Pre-requisites It is assumed that you have:
+ Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bitterlogic.github.io/post/libgdxgooglesignin/" />
+
+
+
+<meta property="article:published_time" content="2018-08-03T15:43:48&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-08-03T15:43:48&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Google Sign in LibGDX">
+<meta itemprop="description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
+This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
+Pre-requisites It is assumed that you have:
+ Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here">
+
+
+<meta itemprop="datePublished" content="2018-08-03T15:43:48&#43;08:00" />
+<meta itemprop="dateModified" content="2018-08-03T15:43:48&#43;08:00" />
+<meta itemprop="wordCount" content="180">
+
+
+
+<meta itemprop="keywords" content="libgdx,ios,android," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Google Sign in LibGDX"/>
+<meta name="twitter:description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
+This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
+Pre-requisites It is assumed that you have:
+ Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bitter Logic</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bitter Logic</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Google Sign in LibGDX</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-08-03 </span>
+        <div class="post-category">
+            
+              <a href="/categories/libgdx/"> LibGDX </a>
+            
+              <a href="/categories/games/"> Games </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#pre-requisites">Pre-requisites</a></li>
+<li><a href="#installation">Installation</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.</p>
+
+<p>This is based on <a href="https://github.com/MobiDevelop/robovm-robopods">MobiDevelop&rsquo;s Google Sign-in Robopods</a>.</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>It is assumed that you have:</p>
+
+<ul>
+<li>Created a LibGDX application using the standard <a href="https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle">gdx-setup wizard</a></li>
+<li>Get an <code>OAuth client ID</code> &amp; <code>URL scheme</code> for your project from <a href="https://developers.google.com/identity/sign-in/ios/start-integrating">here</a></li>
+<li>Download  3rd party native framework for your iOS module, instruction <a href="https://github.com/MobiVM/robovm-robopods/tree/master/google-signin/ios">here</a><br /></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+<li><p>Add downloaded framework to your iOS project&rsquo;s <code>libs/</code> folder (create If not present there)</p></li>
+
+<li><p>Put the <code>GoogleSignIn.bundle</code> in your iOS project&rsquo;s <code>resources/</code> folder (create If not present there)</p></li>
+
+<li><p>Add the following to your <code>robovm.xml</code></p>
+
+<pre><code>&lt;config&gt;
+...
+&lt;resources&gt;
+    ...
+    &lt;resource&gt;
+        &lt;directory&gt;resources&lt;/directory&gt;
+    &lt;/resource&gt;
+&lt;/resources&gt;
+...
+&lt;frameworkPaths&gt;
+    &lt;path&gt;libs&lt;/path&gt;
+&lt;/frameworkPaths&gt;
+&lt;frameworks&gt;
+    &lt;framework&gt;GoogleSignIn&lt;/framework&gt;
+&lt;/frameworks&gt;
+&lt;/config&gt; 
+</code></pre></li>
+
+<li><p>Add the following to your <code>info.plist.xml</code></p>
+
+<pre><code>&lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+&lt;array&gt;
+  &lt;dict&gt;
+  &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
+        &lt;string&gt;Editor&lt;/string&gt;
+        &lt;key&gt;CFBundleURLName&lt;/key&gt;
+        &lt;string&gt;com.googleusercontent.apps.1234567890-qweasdzxcqweasdzxc321456&lt;/string&gt;
+        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+        &lt;array&gt;
+           &lt;string&gt;com.googleusercontent.apps.1234567890-qweasdzxcqweasdzxc321456&lt;/string&gt;
+         &lt;/array&gt;
+     &lt;/dict&gt;
+     &lt;dict&gt;
+            &lt;key&gt;CFBundleTypeRole&lt;/key&gt;
+            &lt;string&gt;Editor&lt;/string&gt;
+            &lt;key&gt;${bundle.id}&lt;/key&gt;
+            &lt;string&gt;${bundle.id}&lt;/string&gt;
+            &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+            &lt;array&gt;
+                &lt;string&gt;${bundle.id}&lt;/string&gt;
+            &lt;/array&gt;
+        &lt;/dict&gt;
+&lt;/array&gt;
+</code></pre></li>
+
+<li><p>Add the following dependency to your <code>build.gradle</code></p>
+
+<pre><code>dependencies {
+     ... other dependencies ...
+     compile &quot;com.mobidevelop.robovm:robopods-google-signin-ios:$robopodsVersion&quot;
+}
+</code></pre></li>
+
+<li><p>Coding part</p></li>
+</ol>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Abhishek Aryan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-08-03</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/libgdx/">libgdx</a>
+          
+          <a href="/tags/ios/">ios</a>
+          
+          <a href="/tags/android/">android</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/libgdx/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">LibGDX</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:mybitterlogic@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/thebitterlogic" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://facebook.com/bitterlogic" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://github.com/bitterlogic" class="iconfont icon-github" title="github"></a>
+      <a href="https://bitterlogic.tumblr.com" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="https://www.instagram.com/bitterlogic" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="https://bitterlogic.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Abhishek Aryan</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
