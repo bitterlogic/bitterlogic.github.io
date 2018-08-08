@@ -286,16 +286,17 @@ Pre-requisites It is assumed that you have:
 
 <p>Create an interface in core module</p>
 
-<p>public interface SignInServiceApi {<br />
-        void signIn();<br />
-        void signOut();<br />
-   }</p>
+<pre><code> public interface SignInServiceApi {  
+    void signIn();  
+    void signOut();  
+ }
+</code></pre>
 
 <p>Implement your interface in ios module</p>
 
-<p>public class IOSLauncher extends IOSApplication.Delegate implements SignInServiceApi{</p>
+<pre><code> public class IOSLauncher extends IOSApplication.Delegate implements SignInServiceApi{  
 
-<pre><code>   private final static String CLIENT_ID = &quot;put your client id here&quot;;  
+   private final static String CLIENT_ID = &quot;put your client id here&quot;;  
    private Main main;    
 
   @Override  
@@ -369,9 +370,8 @@ Pre-requisites It is assumed that you have:
         GIDSignIn.getSharedInstance().signOut();  
         GIDSignIn.getSharedInstance().disconnect();  
    }  
-</code></pre>
-
-<p>}</p></li>
+ }
+</code></pre></li>
 </ol>
 
 <p>Done.</p>
