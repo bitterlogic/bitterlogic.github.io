@@ -12,15 +12,15 @@
     
     
     <item>
-      <title>Google Sign in LibGDX</title>
+      <title>Google Sign in LibGDX (IOS)</title>
       <link>https://bitterlogic.github.io/post/libgdxgooglesignin/</link>
       <pubDate>Fri, 03 Aug 2018 15:43:48 +0800</pubDate>
       
       <guid>https://bitterlogic.github.io/post/libgdxgooglesignin/</guid>
-      <description>Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&amp;rsquo;ll explain how integrate Google Sign in iOS.
+      <description>Introduction This tutorial will show you how to integrate Google-Sign in LibGDX. I assume that you&amp;rsquo;re familiar with LibGDX and Google Sign-In flow. I&amp;rsquo;ll explain how to integrate Google-Sign in iOS module of LibGDX.
 This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
- Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here</description>
+ LibGDX project with ios module, use standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here</description>
     </item>
     
   </channel>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Google Sign in LibGDX - Bitter Logic</title>
+  <title>Google Sign in LibGDX (IOS) - Bitter Logic</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,10 +17,10 @@
 
 
 <meta name="author" content="Abhishek Aryan" />
-  <meta name="description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&amp;rsquo;ll explain how integrate Google Sign in iOS.
+  <meta name="description" content="Introduction This tutorial will show you how to integrate Google-Sign in LibGDX. I assume that you&amp;rsquo;re familiar with LibGDX and Google Sign-In flow. I&amp;rsquo;ll explain how to integrate Google-Sign in iOS module of LibGDX.
 This is based on MobiDevelop&amp;rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
- Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
+ LibGDX project with ios module, use standard gdx-setup wizard Get an OAuth client ID &amp;amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -52,11 +52,11 @@ Pre-requisites It is assumed that you have:
 
 
 
-<meta property="og:title" content="Google Sign in LibGDX" />
-<meta property="og:description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
+<meta property="og:title" content="Google Sign in LibGDX (IOS)" />
+<meta property="og:description" content="Introduction This tutorial will show you how to integrate Google-Sign in LibGDX. I assume that you&rsquo;re familiar with LibGDX and Google Sign-In flow. I&rsquo;ll explain how to integrate Google-Sign in iOS module of LibGDX.
 This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
- Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
+ LibGDX project with ios module, use standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bitterlogic.github.io/post/libgdxgooglesignin/" />
 
@@ -76,26 +76,26 @@ Pre-requisites It is assumed that you have:
 
 
 
-<meta itemprop="name" content="Google Sign in LibGDX">
-<meta itemprop="description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
+<meta itemprop="name" content="Google Sign in LibGDX (IOS)">
+<meta itemprop="description" content="Introduction This tutorial will show you how to integrate Google-Sign in LibGDX. I assume that you&rsquo;re familiar with LibGDX and Google Sign-In flow. I&rsquo;ll explain how to integrate Google-Sign in iOS module of LibGDX.
 This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
- Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here">
+ LibGDX project with ios module, use standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here">
 
 
 <meta itemprop="datePublished" content="2018-08-03T15:43:48&#43;08:00" />
 <meta itemprop="dateModified" content="2018-08-03T15:43:48&#43;08:00" />
-<meta itemprop="wordCount" content="180">
+<meta itemprop="wordCount" content="376">
 
 
 
 <meta itemprop="keywords" content="libgdx,ios,android," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Google Sign in LibGDX"/>
-<meta name="twitter:description" content="Introduction This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.
+<meta name="twitter:title" content="Google Sign in LibGDX (IOS)"/>
+<meta name="twitter:description" content="Introduction This tutorial will show you how to integrate Google-Sign in LibGDX. I assume that you&rsquo;re familiar with LibGDX and Google Sign-In flow. I&rsquo;ll explain how to integrate Google-Sign in iOS module of LibGDX.
 This is based on MobiDevelop&rsquo;s Google Sign-in Robopods.
 Pre-requisites It is assumed that you have:
- Created a LibGDX application using the standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here"/>
+ LibGDX project with ios module, use standard gdx-setup wizard Get an OAuth client ID &amp; URL scheme for your project from here Download 3rd party native framework for your iOS module, instruction here"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -162,7 +162,7 @@ Pre-requisites It is assumed that you have:
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Google Sign in LibGDX</h1>
+      <h1 class="post-title">Google Sign in LibGDX (IOS)</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2018-08-03 </span>
@@ -206,7 +206,7 @@ Pre-requisites It is assumed that you have:
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This tutorial will show you how to integrated google sign in in LibGDX. I assume that you are familiar with LibGDX, cross platform gaming framework. I&rsquo;ll explain how integrate Google Sign in iOS.</p>
+<p>This tutorial will show you how to integrate Google-Sign in LibGDX. I assume that you&rsquo;re familiar with LibGDX and Google Sign-In flow. I&rsquo;ll explain how to integrate Google-Sign in iOS module of LibGDX.</p>
 
 <p>This is based on <a href="https://github.com/MobiDevelop/robovm-robopods">MobiDevelop&rsquo;s Google Sign-in Robopods</a>.</p>
 
@@ -215,7 +215,7 @@ Pre-requisites It is assumed that you have:
 <p>It is assumed that you have:</p>
 
 <ul>
-<li>Created a LibGDX application using the standard <a href="https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle">gdx-setup wizard</a></li>
+<li>LibGDX project with ios module, use  standard <a href="https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle">gdx-setup wizard</a></li>
 <li>Get an <code>OAuth client ID</code> &amp; <code>URL scheme</code> for your project from <a href="https://developers.google.com/identity/sign-in/ios/start-integrating">here</a></li>
 <li>Download  3rd party native framework for your iOS module, instruction <a href="https://github.com/MobiVM/robovm-robopods/tree/master/google-signin/ios">here</a><br /></li>
 </ul>
@@ -282,8 +282,99 @@ Pre-requisites It is assumed that you have:
 }
 </code></pre></li>
 
-<li><p>Coding part</p></li>
+<li><p>Coding part</p>
+
+<p>Create an interface in core module</p>
+
+<p>public interface SignInServiceApi {<br />
+       void signIn();<br />
+       void signOut();<br />
+   }</p>
+
+<p>Implement your interface in ios module</p>
+
+<p>public class IOSLauncher extends IOSApplication.Delegate implements SignInServiceApi{</p>
+
+<pre><code>   private final static String CLIENT_ID = &quot;put your client id here&quot;;  
+   private Main main;    
+
+   @Override  
+   protected IOSApplication createApplication() {  
+
+        IOSApplicationConfiguration config = new IOSApplicationConfiguration();  
+        return  new IOSApplication(main=new Main(this), config);  
+   }  
+
+   public static void main(String[] argv) {  
+           NSAutoreleasePool pool = new NSAutoreleasePool();  
+          UIApplication.main(argv, null, IOSLauncher.class);  
+          pool.close();  
+   }  
+
+   @Override  
+   public boolean openURL(UIApplication app, NSURL url, UIApplicationOpenURLOptions options) {  
+       return GIDSignIn.getSharedInstance().handleURL(url,options.getSourceApplication(),(NSPropertyList)options.getAnnotation());  
+   }  
+
+   @Override  
+   public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) {  
+
+        GIDSignIn.getSharedInstance().setDelegate(new GIDSignInDelegateAdapter(){  
+
+             @Override  
+             public void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error) {  
+                 if (error==null){  
+                     GIDProfileData gidProfileData=user.getProfile();  
+                     main.updateData(gidProfileData.getName(),gidProfileData.getEmail());  
+                 }  
+                 Gdx.app.log(&quot;GIDSignInDelegate:didSignIn&quot;, &quot;Error is &quot;+error);  
+             }  
+
+             @Override  
+             public void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error) {  
+                 if (user==null) {  
+                     main.updateData(&quot;&quot;, &quot;&quot;);  
+                  }  
+                Gdx.app.log(&quot;GIDSignInDelegate:didDisconnect&quot;, &quot;Error is &quot;+error);  
+             }  
+        });  
+
+         GIDSignIn.getSharedInstance().setUiDelegate(new GIDSignInUIDelegateAdapter() {  
+
+             @Override  
+             public void willDispatch(GIDSignIn signIn, NSError error) {  }   
+
+             @Override  
+             public void presentViewController(GIDSignIn signIn, UIViewController viewController) {  
+                 UIApplication.getSharedApplication().getKeyWindow().getRootViewController().presentViewController(viewController,true,null);  
+             }  
+
+             @Override  
+             public void dismissViewController(GIDSignIn signIn, UIViewController viewController) {  
+                   viewController.dismissViewController(true, null);  
+             }  
+        });  
+
+       return super.didFinishLaunching(application, launchOptions);  
+   }  
+
+   @Override  
+   public void signIn() {  
+        GIDSignIn.getSharedInstance().setClientID(CLIENT_ID);  
+        GIDSignIn.getSharedInstance().signIn();  
+   }  
+
+   @Override  
+   public void signOut() {  
+        GIDSignIn.getSharedInstance().signOut();  
+        GIDSignIn.getSharedInstance().disconnect();  
+   }  
+</code></pre>
+
+<p>}</p></li>
 </ol>
+
+<p>Done.</p>
 
     </div>
 
