@@ -286,61 +286,60 @@ Pre-requisites It is assumed that you have:
 
 <p>Create an interface in core module</p>
 
-<pre><code>public interface SignInServiceApi {  
-    void signIn();  
-    void signOut();  
-}
-</code></pre>
+<p>public interface SignInServiceApi {<br />
+        void signIn();<br />
+        void signOut();<br />
+   }</p>
 
 <p>Implement your interface in ios module</p>
 
-<pre><code>public class IOSLauncher extends IOSApplication.Delegate implements SignInServiceApi{  
+<p>public class IOSLauncher extends IOSApplication.Delegate implements SignInServiceApi{</p>
 
-   private final static String CLIENT_ID = &quot;put your client id here&quot;;  
+<pre><code>   private final static String CLIENT_ID = &quot;put your client id here&quot;;  
    private Main main;    
 
-   @Override  
-   protected IOSApplication createApplication() {  
+  @Override  
+  protected IOSApplication createApplication() {  
 
-        IOSApplicationConfiguration config = new IOSApplicationConfiguration();  
-        return  new IOSApplication(main=new Main(this), config);  
-   }  
+       IOSApplicationConfiguration config = new IOSApplicationConfiguration();  
+       return  new IOSApplication(main=new Main(this), config);  
+  }  
 
-   public static void main(String[] argv) {  
-           NSAutoreleasePool pool = new NSAutoreleasePool();  
-          UIApplication.main(argv, null, IOSLauncher.class);  
-          pool.close();  
-   }  
+  public static void main(String[] argv) {  
+         NSAutoreleasePool pool = new NSAutoreleasePool();  
+         UIApplication.main(argv, null, IOSLauncher.class);  
+         pool.close();  
+  }  
 
-   @Override  
-   public boolean openURL(UIApplication app, NSURL url, UIApplicationOpenURLOptions options) {  
+  @Override  
+  public boolean openURL(UIApplication app, NSURL url, UIApplicationOpenURLOptions options) {  
        return GIDSignIn.getSharedInstance().handleURL(url,options.getSourceApplication(),(NSPropertyList)options.getAnnotation());  
    }  
 
-   @Override  
-   public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) {  
+  @Override  
+  public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) {  
 
         GIDSignIn.getSharedInstance().setDelegate(new GIDSignInDelegateAdapter(){  
 
-             @Override  
-             public void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error) {  
+            @Override  
+            public void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error) {  
                  if (error==null){  
                      GIDProfileData gidProfileData=user.getProfile();  
                      main.updateData(gidProfileData.getName(),gidProfileData.getEmail());  
                  }  
                  Gdx.app.log(&quot;GIDSignInDelegate:didSignIn&quot;, &quot;Error is &quot;+error);  
-             }  
+            }  
 
-             @Override  
-             public void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error) {  
+            @Override  
+            public void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error) {  
                  if (user==null) {  
                      main.updateData(&quot;&quot;, &quot;&quot;);  
-                  }  
-                Gdx.app.log(&quot;GIDSignInDelegate:didDisconnect&quot;, &quot;Error is &quot;+error);  
-             }  
-        });  
+                 }  
+                 Gdx.app.log(&quot;GIDSignInDelegate:didDisconnect&quot;, &quot;Error is &quot;+error);  
+            }  
+       });  
 
-         GIDSignIn.getSharedInstance().setUiDelegate(new GIDSignInUIDelegateAdapter() {  
+      GIDSignIn.getSharedInstance().setUiDelegate(new GIDSignInUIDelegateAdapter() {  
 
              @Override  
              public void willDispatch(GIDSignIn signIn, NSError error) {  }   
@@ -354,7 +353,7 @@ Pre-requisites It is assumed that you have:
              public void dismissViewController(GIDSignIn signIn, UIViewController viewController) {  
                    viewController.dismissViewController(true, null);  
              }  
-        });  
+       });  
 
        return super.didFinishLaunching(application, launchOptions);  
    }  
@@ -370,8 +369,9 @@ Pre-requisites It is assumed that you have:
         GIDSignIn.getSharedInstance().signOut();  
         GIDSignIn.getSharedInstance().disconnect();  
    }  
-}
-</code></pre></li>
+</code></pre>
+
+<p>}</p></li>
 </ol>
 
 <p>Done.</p>
